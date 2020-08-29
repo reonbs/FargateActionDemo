@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  testfargate:
+    image: ${DOCKER_REGISTRY-}testfargate
+    build:
+      context: .
+      dockerfile: TestFargate/Dockerfile

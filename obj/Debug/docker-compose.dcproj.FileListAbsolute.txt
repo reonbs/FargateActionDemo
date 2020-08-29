@@ -1,0 +1,8 @@
+/Users/ren-ekene/FargateActionDemo/bin/Debug/appsettings.Development.json
+/Users/ren-ekene/FargateActionDemo/bin/Debug/appsettings.json
+/Users/ren-ekene/FargateActionDemo/bin/Debug/Properties/launchSettings.json
+/Users/ren-ekene/FargateActionDemo/bin/Debug/TestFargate.dll
+/Users/ren-ekene/FargateActionDemo/bin/Debug/TestFargate.pdb
+/Users/ren-ekene/FargateActionDemo/obj/Debug/docker-compose.dcprojAssemblyReference.cache
+/Users/ren-ekene/FargateActionDemo/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache
+/Users/ren-ekene/FargateActionDemo/obj/Debug/docker-compose.dcproj.CopyComplete
