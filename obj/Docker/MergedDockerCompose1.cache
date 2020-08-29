@@ -1,0 +1,38 @@
+services:
+  testfargate:
+    build:
+      context: /Users/ren-ekene/FargateActionDemo
+      dockerfile: Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: TestFargate
+      target: base
+    container_name: TestFargate
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: testfargate:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/TestFargate.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - target: 80
+    - target: 443
+    tty: true
+    volumes:
+    - /Users/ren-ekene/FargateActionDemo/TestFargate:/app:rw
+    - /Users/ren-ekene/vsdbg/vs2017u5:/remote_debugger:rw
+    - /Users/ren-ekene/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/ren-ekene/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    - /usr/local/share/dotnet/sdk/NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - /Users/ren-ekene/.nuget/packages:/root/.nuget/packages:ro
+    - /Users/ren-ekene/FargateActionDemo:/src:rw
+version: '3.4'

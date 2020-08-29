@@ -1,0 +1,16 @@
+services:
+  testfargate:
+    build:
+      context: /Users/ren-ekene/FargateActionDemo
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: testfargate
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - /Users/ren-ekene/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/ren-ekene/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

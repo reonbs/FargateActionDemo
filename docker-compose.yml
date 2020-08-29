@@ -5,4 +5,4 @@ services:
     image: ${DOCKER_REGISTRY-}testfargate
     build:
       context: .
-      dockerfile: TestFargate/Dockerfile
+      dockerfile: Dockerfile

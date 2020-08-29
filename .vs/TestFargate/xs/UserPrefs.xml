@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{A2134F8B-E5C8-4AEF-A709-C9A49D660E4D}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TestFargate/Dockerfile">
+  <MonoDevelop.Ide.Workbench ActiveDocument="docker-compose.yml">
     <Files>
       <File FileName="TestFargate/Dockerfile" Line="1" Column="1" />
+      <File FileName="docker-compose.yml" Line="8" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TestFargate" expanded="True">
-            <Node name="docker-compose" expanded="True" />
-            <Node name="TestFargate" expanded="True">
-              <Node name="Dockerfile" selected="True" />
+            <Node name="docker-compose" expanded="True">
+              <Node name="docker-compose.yml" selected="True" />
             </Node>
+            <Node name="TestFargate" expanded="True" />
           </Node>
         </State>
       </Pad>
