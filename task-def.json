@@ -1,15 +1,15 @@
 {
-    "family": "sample-fargate2", 
+    "family": "sample-fargate3", 
     "executionRoleArn": "arn:aws:iam::556096966973:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc", 
     "containerDefinitions": [
         {
-            "name": "fargate-app2", 
-            "image": "httpd:2.4", 
+            "name": "fargate-app3", 
+            "image": "testfargate", 
             "portMappings": [
                 {
-                    "containerPort": 81, 
-                    "hostPort": 81, 
+                    "containerPort": 82, 
+                    "hostPort": 82, 
                     "protocol": "tcp"
                 }
             ], 
