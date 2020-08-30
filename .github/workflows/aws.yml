@@ -77,5 +77,5 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: fargate-service3
-        cluster: default
+        cluster: fargate-service3
         wait-for-service-stability: true
